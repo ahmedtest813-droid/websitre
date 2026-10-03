@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Design tokens. Use these through Tailwind utilities (bg-primary-600, text-ink-900…). */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  /* Primary — confident blue: trust, data, actions */
+  --color-primary-50: #eef4ff;
+  --color-primary-100: #dce7fe;
+  --color-primary-200: #bfd3fe;
+  --color-primary-300: #93b4fd;
+  --color-primary-400: #6690f9;
+  --color-primary-500: #3d6cf4;
+  --color-primary-600: #2650e0;
+  --color-primary-700: #1d3fba;
+  --color-primary-800: #1c3794;
+
+  /* Ink — deep navy for hero surfaces and strong headings */
+  --color-ink-700: #24345c;
+  --color-ink-800: #15234a;
+  --color-ink-900: #0c1631;
+  --color-ink-950: #070e22;
+
+  /* Accent — money / positive outcomes. Use sparingly. */
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-300: #6ee7b7;
+  --color-accent-400: #34d399;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+
+  --radius-card: 1rem;
+}
+
+:root {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-slate-50);
+  color: var(--color-slate-900);
 }
